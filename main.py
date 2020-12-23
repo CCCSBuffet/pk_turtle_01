@@ -7,12 +7,16 @@ def main():
 	trtl.penup()
 	trtl.goto(-100, 0)
 	trtl.pendown()
-	c = 0
-	for x in range(12):
+	flag = True
+	for x in range(36):
+		if flag:
+			trtl.pendown()
+		else:
+			trtl.penup()
+		flag = not flag
 		trtl.forward(200)
-		trtl.left(150)
-		c = c + 0.08
-		trtl.pencolor((c, c, c))
+		trtl.left(170)
+
 	_ = input('hit enter to exit ')
 
 if __name__ == '__main__':
