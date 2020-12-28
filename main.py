@@ -1,21 +1,15 @@
 import turtle as t
 
 def main():
-	screen = t.getscreen()
 	trtl = t.Turtle(visible=False)
-	trtl.hideturtle()
 	trtl.penup()
-	trtl.goto(-100, 0)
+	trtl.goto(-100, -100)
 	trtl.pendown()
-	flag = True
-	for x in range(36):
-		if flag:
-			trtl.pendown()
-		else:
-			trtl.penup()
-		flag = not flag
-		trtl.forward(200)
-		trtl.left(170)
+	length = 120
+	while length > 20:
+		trtl.forward(length)
+		trtl.left(47)
+		length = length - 1
 
 	_ = input('hit enter to exit ')
 
